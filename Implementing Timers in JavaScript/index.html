@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="You are tasked with developing a web-based countdown timer application that allows users to set a timer for a specified duration. The application should utilize intervals and timeouts to update the timer display dynamically and notify the user when the timer expires.">
+    <meta name="keywords" content="async, JavaScript, API">
+    <meta name="author" content="Jaycob Hoffman">
+    <script src="script.js"></script>
+    <title>Implementing Timers in JavaScript</title>
+</head>
+<body>
+    <header>
+        <h1>Implementing Timers in JavaScript</h1>
+    </header>
+    <main>
+        <article>
+            <h2>Task 1: Countdown Timer</h2>
+            <form>
+                <div id="field-container">
+                    <label for="user-defined-duration">Enter a duration (in seconds): </label>
+                    <input type="number" id="user-defined-duration" name="user-defined-duration" aria-label="Enter a duration (in seconds):" required>
+                    <div role="alert" aria-live="assertive" style="display: none;">Please enter a duration in seconds.</div>
+                </div>
+                <button type="button" onclick="startTimer()">Start Timer</button>
+            </form>
+            <p id="tick-message">0</p>
+        </article>
+        <article id="delayed-notification-container">
+            <h2>Task 2: Delayed Notification</h2>
+            <button type="button" onclick="sendDelayedNotification()">Send Notification</button>
+            <p id="status">Push button to send delayed notification!</p>
+        </article>
+        <article id="repeat-notification-container">
+            <h2>Task 3: Repeat Notification</h2>
+            <button id="dismiss" type="button" onclick="sendRepeatNotification()">Send Notification</button>
+            <button type="button" onclick="stopRepeatNotification()">Dismiss</button>
+            <p id="repeat">Push button to send repeat notification!</p>
+        </article>
+    </main>
+</body>
+</html>
